@@ -2,7 +2,7 @@
 import socket 
 import select 
 import sys 
-from thread import *
+from _thread import *
 
 """The first argument AF_INET is the address domain of the 
 socket. This is used when we have an Internet Domain with 
@@ -41,7 +41,7 @@ list_of_clients = []
 def clientthread(conn, addr): 
 
 	# sends a message to the client whose user object is conn 
-	conn.send("Welcome to this chatroom!") 
+	conn.send(b"Welcome to this chatroom!") 
 
 	while True: 
 			try: 
